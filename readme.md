@@ -27,13 +27,15 @@ kubectl auth can-i list nodes --as-group system:masters
 ```sh
 kubectl apply -f templates
 
+kubectl describe deployment cosmos
+
 kubectl logs pod/<pod> # fails on multi container
 
 kubectl logs pod/<pod> -c <container>
 
-kubectl logs deploy/<deploy> -f
+kubectl logs deploy/multi-container -f # fails on multi container
 
-kubectl logs deploy/<deploy> -c <container> # chooses a pod
+kubectl logs deploy/multi-container -c <container> # chooses a pod
 ```
 
 ### Helm
