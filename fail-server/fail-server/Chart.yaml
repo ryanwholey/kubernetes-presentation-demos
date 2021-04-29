@@ -1,0 +1,14 @@
+
+apiVersion: v1
+
+name: fail-server
+
+version: 0.0.1
+# appVersion specifies the scoop app schema version that this chart fulfills.
+# It includes a major version (required) and an optional minor version.
+# When releasing a new major version of this chart, increment the major appVersion as well.
+appVersion: '1'
+
+description: fail-server tests failure modes for kubernets
+
+icon: https://www.takescoop.com/static/images/misc/scoop-logo-green.png

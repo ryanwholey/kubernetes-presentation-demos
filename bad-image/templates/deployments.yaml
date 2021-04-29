@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bad-image
+  labels:
+    app: bad-image
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: bad-image
+  template:
+    metadata:
+      labels:
+        app: bad-image
+    spec:
+      containers:
+      - name: server-1
+        image: ryanwholey/bad-image:latest
+        env:
+        - name: PORT 
+          value: "3000"
+        ports:
+        - containerPort: 3000
