@@ -1,5 +1,9 @@
 # Presentation apps
 
+```sh
+minikube start --driver=hyperkit
+```
+
 ## Commands
 
 ### Cluster Auth
